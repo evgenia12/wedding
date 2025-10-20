@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Erik &amp; Genia Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&amp;family=Dancing+Script:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  body {
+    font-family: 'Playfair Display', serif;
+    color: #123463;
+    background: url('images/background-no-text-splash.jpg') repeat-y center top;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+    padding: 6rem 1rem 3rem;
+  }
+  header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    color: #4d6f93;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    header h1 { font-size: 3.8rem; }
+  }
+  .wedding-info {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #4d6f93;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  .faq-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #4d6f93;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.5px;
+  }
+  .faq-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 8px;
+    background: rgba(77,111,147,0.15);
+    border-radius: 4px;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 40px;
+    text-align: left;
+    display: inline-block;
+  }
+  ul li { margin-bottom: 6px; }
+  .welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    transition-delay: 0.2s;
+  }
+  .welcome-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .welcome-text {
+    flex: 1 1 400px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .welcome-text h3 {
+    font-family: 'Playfair Display', serif;
+    color: #123463;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .welcome-cursive {
+    font-family: 'Dancing Script', cursive;
+    color: #4d6f93;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .welcome-photo {
+    flex: 1 1 400px;
+  }
+  .welcome-photo img {
+    width: 60%;
+    margin: -10px auto 0 auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border-radius: 0;
+  }
+  .timeline {
+    text-align: center;
+    margin: 20px auto; /* Reduced space below timeline */
+  }
+  .timeline img {
+    width: 65%;
+    max-width: 550px;
+    border-radius: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  @media (max-width: 768px) {
+    .timeline img {
+      width: 90%;
+      max-width: none;
+    }
+  }
+  .rsvp-btn {
+    display: inline-block;
+    padding: 20px 60px;
+    background: #123463;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background .2s ease, box-shadow .3s ease;
+  }
+  .rsvp-btn:hover {
+    background:#0e2a4b;
+    box-shadow:0 0 20px rgba(18,52,99,0.5);
+  }
+  footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.95rem;
+    color: #123463;
+  }
+
+/* Medium spacing for FAQ area (Dress Code → What to Eat in Manila) */
+.faq-sections section {
+  padding: 1.6rem 1.2rem !important;
+  margin: 0.8rem auto !important;
+}
+.faq-sections h2 {
+  margin-bottom: 0.8rem !important;
+}
+.faq-sections ul {
+  margin-top: 0.6rem !important;
+}
+
+
+/* Tighter spacing between Wedding Day Travel Tips and timeline */
+section + .timeline {
+  margin-top: -0.8rem !important;
+  padding-top: 0 !important;
+}
+
+</style>
+<style>
+body {
+    font-family: 'Playfair Display', serif;
+    color: #123463;
+    background: url('images/background-no-text-splash.jpg') repeat-y center top;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+    padding: 6rem 1rem 3rem;
+  }
+  header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    color: #4d6f93;
+    margin-bottom: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    header h1 { font-size: 3.8rem; }
+  }
+  .wedding-info {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #4d6f93;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 40px;
+    text-align: left;
+    display: inline-block;
+  }
+  ul li { margin-bottom: 6px; }
+  .welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .welcome-text {
+    flex: 1 1 400px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .welcome-photo img {
+    width: 60%;
+    margin: -10px auto 0 auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  }
+  .timeline {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .timeline img {
+    width: 65%;
+    max-width: 550px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  @media (max-width: 768px) {
+    .timeline img {
+      width: 90%;
+      max-width: none;
+    }
+  }
+  .rsvp-btn {
+    display: inline-block;
+    padding: 20px 60px;
+    background: #123463;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background .2s ease, box-shadow .3s ease;
+  }
+  .rsvp-btn:hover {
+    background:#0e2a4b;
+    box-shadow:0 0 20px rgba(18,52,99,0.5);
+  }
+  footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.95rem;
+    color: #123463;
+  }
+
+  /* Gift Fund Section */
+  #gift-fund {
+    text-align: center;
+    padding: 2.2rem 1rem 3rem;
+    background-color: rgba(176, 208, 242, 0.35);
+    margin-top: 40px;
+    border-radius: 12px;
+  }
+  #gift-fund h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #4d6f93;
+    margin-bottom: 1.2rem;
+  }
+  #gift-fund p {
+    max-width: 600px;
+    margin: 0 auto 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  .gift-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.8rem;
+  }
+  .kofi-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: #2f3d4c;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 0.8rem 1.4rem;
+    border: 2px solid #b0d0f2;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  .kofi-button:hover {
+    background-color: #b0d0f2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  }
+  .gift-icon {
+    height: 30px;
+    width: 30px;
+    transition: filter 0.3s ease;
+  }
+  .kofi-button:hover .gift-icon {
+    filter: brightness(0) invert(1);
+  }
+  @media (max-width: 600px) {
+    .kofi-button {
+      width: auto;
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+      gap: 8px;
+    }
+    .gift-icon {
+      height: 26px;
+      width: 26px;
+    }
+    #gift-fund p {
+      font-size: 0.95rem;
+      padding: 0 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>Erik &amp; Genia</h1>
+<div class="wedding-info"><strong>WHEN:</strong> 24 January 2026 | <strong>WHERE:</strong> Manila, Philippines | <strong>DRESS CODE:</strong> Semi-Formal</div>
+</header>
+<section id="welcome">
+<div class="welcome-container">
+<div class="welcome-text">
+<p class="welcome-cursive">Together from 2014 to today and forever ❤</p>
+<p>Join us to celebrate together in Manila, Philippines.</p>
+<p>Whether it’s your first time or a return visit, this vibrant country offers endless warmth, history, and hospitality.</p>
+<p>To help you prepare for the wedding and make the most of your time in the Philippines, we’ve included some essential tips below. For more details, check out the <strong>FAQ</strong> section further down the page.</p>
+<h3 style="text-align: left; margin-top: 28px; margin-bottom: 8px;">Essentials To Know Before You Go:</h3>
+<ul style="margin-left: 0; padding-left: 18px; text-align: left; margin-top: 0;">
+  <li><strong>Currency:</strong> Philippine Peso (₱); credit cards are widely accepted</li>
+  <li><strong>Transport:</strong>
+    <a href="https://www.grab.com/my/download/" 
+       style="color: #3d73d5; text-decoration: underline;" 
+       target="_blank" 
+       rel="noopener noreferrer">
+       Grab
+    </a> 
+    (local ride-hailing app) is the easiest and safest way to get around</li>
+  <li><strong>Power Plugs:</strong> Type A/B (same as Canada/USA); voltage is 220V</li>
+  <li><strong>Phone &amp; Internet:</strong> Get a local SIM (Smart or Globe) at Manila Airport or in the city (passport required), or an eSIM via 
+    <a href="https://airalo.go.link/7JXrF" 
+       style="color: #3d73d5; text-decoration: underline;" 
+       target="_blank" 
+       rel="noopener noreferrer">
+       Airalo
+    </a> 
+    — use our Airalo referral code <strong>EVGENI8160</strong> for a discount
+  </li>
+</ul>
+</div>
+<div class="welcome-photo">
+<img alt="Couple Photo" src="images/polaroid2.jpg"/>
+</div>
+</div>
+</section>
+<section>
+<h2>Wedding Day Travel Tips</h2>
+<p>The wedding venue is in Rizal, about 35 km from Manila centre. Traffic in Manila can be unpredictable and heavy, especially during rush hour, so expect the drive to take at least <strong>1.5 hours</strong>. Plan to arrive early to avoid delays and travel stress.</p>
+</section><section class="timeline">
+<img alt="Wedding Timeline" src="images/wedding-timeline.jpg"/>
+</section>
+
+<div style="text-align:center;">
+<h2 class="faq-title">FAQ</h2>
+</div><div class="faq-sections"><section>
+<h2>Dress Code</h2>
+<ul>
+  <li><strong>Attire:</strong> Formal or semi-formal (no casual wear)</li>
+  <li><strong>Palette:</strong> All shades of blue or green. Colour matching is optional; avoid white</li>
+  <li><strong>Women:</strong> Gown, midi or cocktail dress, or elegant jumpsuit</li>
+  <li><strong>Men:</strong> Suit or Barong Tagalog</li>
+</ul>
+</section><section>
+<h2>Weather in January</h2>
+<ul>
+<li>Sunny days with mild temperatures around 24–30°C (75–86°F)</li>
+<li>Bring summer wear, sunglasses, and sunscreen (bonus points for a fan or parasol)</li>
+<li>Pack a light layer for the occasional cool evening</li>
+</ul>
+</section><section>
+<h2>Where to Stay</h2>
+<ul>
+<li><strong>Bonifacio Global City (BGC):</strong> Modern, walkable hub with it all. Consider 
+  <a href="https://www.sedahotels.com/hotel/view/1/seda-bgc" style="color: #002147; text-decoration: underline;" target="_blank" rel="noopener noreferrer">Seda</a> 
+  or 
+  <a href="https://www.redplanethotels.com/hotel/bgc-the-fort" style="color: #002147; text-decoration: underline;" target="_blank" rel="noopener noreferrer">Red Planet</a> 
+  hotels</li>
+<li><strong>Makati:</strong> The business and shopping hub, known for great nightlife and hotels</li>
+<li><strong>Pasay:</strong> Conveniently located near the airport and Manila Bay</li>
+</ul>
+</section>
+<section>
+<h2>Things to Do in Manila</h2>
+<ul>
+<li><strong>Intramuros:</strong> Historic walled city with cobblestone streets</li>
+    <li><strong>Rizal Park:</strong> Iconic landmark beside Intramuros</li>
+    <li><strong>Binondo:</strong> World’s oldest Chinatown, known for food and culture</li>
+    <li><strong>National Museum Complex:</strong> Showcases Philippine art and history</li>
+    <li><strong>Mall of Asia:</strong> Local go-to for dining, entertainment, and cooling off</li>
+    <li><strong>Bonifacio Global City (BGC):</strong> Trendy district for dining, shopping, and nightlife</li>
+</ul>
+</section><section>
+<h2>Explore Beyond Manila</h2>
+
+  <h3>Tropical Islands — just a 1-hour flight away</h3>
+  <ul>
+    <li><strong>Palawan:</strong> Stunning lagoons and island-hopping in El Nido and Coron</li>
+    <li><strong>Boracay:</strong> World-famous white-sand beaches and lively nightlife</li>
+  </ul>
+
+  <h3>Day or Weekend Road Trips from Manila</h3>
+  <ul>
+    <li><strong>Tagaytay:</strong> Cool climate with scenic views of Taal Volcano and Lake</li>
+    <li><strong>Batangas:</strong> Mountain scenery and Laiya Beach (2–3.5-hour drive)</li>
+  </ul>
+</section><section>
+<h2>What to Eat in the Philippines</h2>
+<h3>Filipino Favorites</h3>
+<ul>
+<li>Adobo: Soy-vinegar braised chicken or pork</li>
+    <li>Sinigang: Tangy tamarind soup</li>
+    <li>Lumpia: Filipino spring rolls</li>
+    <li>Lechon: Crispy roasted pork</li>
+    <li>Kare-Kare: Peanut stew with oxtail</li>
+    <li>Inihaw: Grilled meats & seafood</li>
+    <li>Pancit: Stir-fried noodles, a celebration staple</li>
+  </ul>
+<h3>Must-Try Desserts &amp; Drinks</h3>
+<ul>
+<li>Halo-Halo: Shaved ice with fruits & ube ice cream</li>
+    <li>Buko Shake: Fresh coconut smoothie</li>
+    <li>Ube Treats: Purple yam cakes & pastries</li>
+    <li>Leche Flan: Creamy caramel custard</li>
+    <li>Puto: Steamed rice cake</li>
+    <li>Biko: Sweet sticky rice</li>
+    <li>Turon: Fried banana spring roll</li>
+    <li>Pandesal: Soft bread roll, sweet or savory</li>
+    <li>Carabao Mango: Often called the world’s best</li></ul>
+<h3>Local Fast Food</h3>
+<ul>
+<li>Jollibee: Iconic Filipino fast food</li>
+    <li>Mang Inasal: Grilled chicken & unlimited rice</li>
+    <li>Chowking: Filipino-Chinese comfort meals</li></ul>
+<h3>Traditional Breakfast</h3>
+<ul>
+<li>Tapsilog: Beef, egg & garlic rice</li>
+    <li>Longsilog: Sweet sausage, egg & garlic rice</li>
+    <li>Bangsilog: Milkfish, egg & garlic rice</li>
+    <li>Barako Coffee: Bold, proudly local brew</li>
+    <li>Champorado: Chocolate rice porridge</li></ul>
+</section></div>
+<div class="rsvp-wrap" style="text-align:center; margin:30px 0 40px;">
+<p class="rsvp-note">
+   <strong>Click the RSVP button below to let us know if you can join us:</strong>
+  </p>
+<a class="rsvp-btn" href="https://rsvp.afable.ca/" rel="noopener" target="_blank">RSVP</a>
+</div>
+<style>
+  .rsvp-note {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #123463;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .rsvp-note {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+</style>
+<section class="section" id="gift-fund">
+<div class="gift-options">
+<div class="gift-box">
+<h2 style="font-family:'Dancing Script',cursive;font-size:2rem;color:#4d6f93;margin-top:0.5rem;margin-bottom:1.2rem;">Gifts</h2>
+<p style="max-width:550px;margin:0 auto 1.2rem;line-height:1.6;color:#333;">Your presence is the greatest gift! If you wish to contribute, we would be deeply grateful for monetary gifts towards our honeymoon or wedding fund.</p>
+<a class="kofi-button" href="https://ko-fi.com/afable" target="_blank">
+<img alt="Wedding gift icon" class="gift-icon" src="https://cdn-icons-png.flaticon.com/512/6003/6003841.png"/>
+<span>Contribute to Our Honeymoon Fund</span>
+</a>
+</div>
+</div></section>
+<!-- Share Your Photos Section (QR centered above text, cursive title, no background box) -->
+<section id="share-photos" style="padding: 70px 20px; background-color: transparent; text-align: center;">
+<!-- QR Code on Top -->
+<div style="margin-bottom: 25px;">
+<img alt="Scan to upload wedding photos" src="images/Blue_QR-Code.png" style="width: 140px; height: auto; border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.05);"/>
+</div>
+<!-- Text Content -->
+<h2 style="font-family: 'Dancing Script', 'Great Vibes', cursive; font-size: 2.1em; color: #1a3d5d; margin-bottom: 10px; font-weight: 500;">
+    Share Your Photos of the Day
+  </h2>
+<p style="font-family: 'Lato', sans-serif; font-size: 1.05em; color: #555; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+    We’d love to see the wedding through your eyes!<br/>
+    Scan the QR code or 
+    <a href="https://drive.google.com/drive/folders/1o0TkZKt2FB5skCfEVEkkA3BUTx9dmihc?usp=sharing" style="color: #1a3d5d; text-decoration: underline;" target="_blank">
+      upload photos and videos here.
+    </a>
+</p>
+</section>
+<footer>
+<p>© 2025 Afable. All rights reserved.</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('section').forEach(section => observer.observe(section));
+  const welcomeContainer = document.querySelector('.welcome-container');
+  if (welcomeContainer) observer.observe(welcomeContainer);
+});
+</script>
+</body>
+</html>

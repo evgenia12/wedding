@@ -226,6 +226,24 @@ img.icon-small {
   vertical-align: middle;
 }
 
+img.icon-small-width-6 {
+  width: 6%;
+}
+
+img.icon-small-margin-top-3 {
+  margin-top: -0.3em
+}
+img.icon-small-margin-top-4 {
+  margin-top: -0.4em
+}
+img.icon-small-margin-top-5 {
+  margin-top: -0.5em
+}
+img.icon-small-margin-top-1 {
+  margin-top: -1em
+}
+
+
 
 
 
@@ -379,6 +397,41 @@ section#welcome + section {
     padding: 30px 1rem !important;
     font-size: 0.9rem !important;
   }
+  img.icon {
+    width: 20%;
+    height: auto; /* Or a fixed height */
+    object-fit: cover; /* How the image fills the defined aspect ratio box */
+    filter: invert(40%) sepia(54%) saturate(305%) hue-rotate(160deg) brightness(97%) contrast(89%);
+  }
+  
+  img.icon-small {
+    width: 10%;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    height: auto; /* Or a fixed height */
+    object-fit: cover; /* How the image fills the defined aspect ratio box */
+    filter: invert(40%) sepia(54%) saturate(305%) hue-rotate(160deg) brightness(97%) contrast(89%);
+    vertical-align: middle;
+  }
+
+  img.icon-small-width-6 {
+    width: 12%;
+  }
+
+img.icon-small-margin-top-3 {
+  margin-top: -0.6em
+}
+img.icon-small-margin-top-4 {
+  margin-top: -0.8em
+}
+img.icon-small-margin-top-5 {
+  margin-top: -1em
+}
+img.icon-small-margin-top-1 {
+  margin-top: -1em
+}
+
+
 }
 </style>
 <style>
@@ -660,13 +713,13 @@ Doors open at 3 PM & close at 3:30 PM.<br />Late arrivals are welcome after the 
 <img class="icon" src="images/icons/destination.png" />
 <h2>Explore Beyond Manila</h2>
 
-<h3>Tropical Islands — just a 1-hour flight away<img class="icon-small" src="images/icons/airplane.png" /></h3>
+<h3>Tropical Islands 1-hour flight away<img class="icon-small" src="images/icons/airplane.png" /></h3>
   <ul>
     <li><strong>Palawan:</strong> Stunning lagoons and island-hopping in El Nido and Coron</li>
     <li><strong>Boracay:</strong> World-famous white-sand beaches and lively nightlife</li>
   </ul>
 
-  <h3><img class="icon-small" src="images/icons/car.png" />Day or Weekend Road Trips from Manila</h3>
+  <h3><img class="icon-small" src="images/icons/car.png" />Road Trips from Manila</h3>
   <ul>
     <li><strong>Tagaytay:</strong> Cool climate with scenic views of Taal Volcano and Lake</li>
     <li><strong>Batangas:</strong> Mountain scenery and Laiya Beach (2–3.5-hour drive)</li>
@@ -674,7 +727,7 @@ Doors open at 3 PM & close at 3:30 PM.<br />Late arrivals are welcome after the 
 </section><section>
 <img class="icon" src="images/icons/cutlery.png" />
 <h2>What to Eat in the Philippines</h2>
-<h3 style="padding-left: 2em;">Filipino Favorites<img class="icon-small" style="width: 6%; margin-top: -0.3em" src="images/icons/spaghetti.png" /></h3>
+<h3 style="padding-left: 2em;">Filipino Favorites<img class="icon-small icon-small-width-6 icon-small-margin-top-3" src="images/icons/spaghetti.png" /></h3>
 <ul>
 <li>Adobo: Soy-vinegar braised chicken or pork</li>
     <li>Sinigang: Tangy tamarind soup</li>
@@ -684,7 +737,7 @@ Doors open at 3 PM & close at 3:30 PM.<br />Late arrivals are welcome after the 
     <li>Inihaw: Grilled meats & seafood</li>
     <li>Pancit: Stir-fried noodles, a celebration staple</li>
   </ul>
-<h3><img class="icon-small" style="margin-top: -0.5em" src="images/icons/panna-cotta.png" />Must-Try Desserts</h3>
+<h3><img class="icon-small icon-small-margin-top-5" src="images/icons/panna-cotta.png" />Must-Try Desserts</h3>
 <ul>
 <li>Halo-Halo: Shaved ice with fruits & ube ice cream</li>
     <li>Buko Shake: Fresh coconut smoothie</li>
@@ -695,12 +748,12 @@ Doors open at 3 PM & close at 3:30 PM.<br />Late arrivals are welcome after the 
     <li>Turon: Fried banana spring roll</li>
     <li>Pandesal: Soft bread roll, sweet or savory</li>
     <li>Carabao Mango: Often called the world’s best</li></ul>
-<h3 style="padding-left: 1em">Local Fast Food<img class="icon-small" style="margin-top: -0.4em" src="images/icons/hamburger.png" /></h3>
+<h3 style="padding-left: 1em">Local Fast Food<img class="icon-small icon-small-margin-top-4" src="images/icons/hamburger.png" /></h3>
 <ul>
 <li>Jollibee: Iconic Filipino fast food</li>
     <li>Mang Inasal: Grilled chicken & unlimited rice</li>
     <li>Chowking: Filipino-Chinese comfort meals</li></ul>
-<h3><img class="icon-small" style="width: 6%; margin-top: -1em" src="images/icons/fried-rice1.png" />Traditional Breakfast</h3>
+<h3><img class="icon-small icon-small-margin-top-1" src="images/icons/fried-rice1.png" />Traditional Breakfast</h3>
 <ul>
 <li>Tapsilog: Beef, egg & garlic rice</li>
     <li>Longsilog: Sweet sausage, egg & garlic rice</li>

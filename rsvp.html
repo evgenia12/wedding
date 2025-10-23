@@ -178,7 +178,7 @@
   <p class="lead">Please complete the RSVP form below by <strong>November 20, 2025</strong>. We’re so excited to celebrate with you.</p>
 
   <div class="frame-wrap" aria-label="Embedded RSVP form">
-    <iframe class="form-embed" src="https://forms.gle/vEZ7TkHkYQbUVAi89" title="RSVP Form (Erik & Genia)"></iframe>
+    <iframe class="form-embed" id="fg" src="https://forms.gle/vEZ7TkHkYQbUVAi89" title="RSVP Form (Erik & Genia)"></iframe>
   </div>
   
 <p class="small">Please note that our wedding will be an adults-only celebration. We truly appreciate your understanding and cooperation.</p>
@@ -196,14 +196,22 @@
 </div>
 
 <script>
+const pk = {
+	afable2026: 'https://forms.gle/vEZ7TkHkYQbUVAi89',
+	fk96: 'https://forms.gle/ToTd8XbRaGb9Efk96'
+};
+
 function checkPassword() {
-  const input = document.getElementById('passwordInput').value.trim().toLowerCase();
-  if (input === 'afable2026') {
+  const input = document.getElementById('passwordInput').value.trim();
+  if (input in pk) {
+	 //pw points to gform 
+    document.getElementById('fg').src = pk[input];
+	//show modal
     document.getElementById('passwordModal').style.display = 'none';
     document.getElementById('content').style.display = 'block';
     document.body.style.overflow = 'auto';
   } else {
-    alert('Incorrect password. Please try again.');
+    alert('Incorrect password. Please check your invitation for your password.');
   }
 }
 

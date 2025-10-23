@@ -37,7 +37,7 @@
     opacity: 0;
     transform: translateY(0);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
     padding: 3rem 2rem;
     text-align: center;
     max-width: 1000px;
@@ -45,9 +45,9 @@
   }
   section.visible {
     opacity: 1;
-    transform: translateY(-1em);
+    transform: translateY(-15px);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
   h2 {
     font-family: 'Dancing Script', cursive;
@@ -93,13 +93,13 @@
     opacity: 0;
     transform: translateY(0);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
   .welcome-container.visible {
     opacity: 1;
-    transform: translateY(-1em);
+    transform: translateY(-15px);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
   .welcome-text {
     flex: 1 1 400px;
@@ -277,7 +277,7 @@ section + .timeline {
   /* Snappier animation for RSVP, Gift Fund, and QR sections */
   .snappy {
     transition: opacity 0.8s ease, transform 0.8s ease !important;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
 
 
@@ -471,7 +471,7 @@ body {
     opacity: 0;
     transform: translateY(0);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
     padding: 3rem 2rem;
     text-align: center;
     max-width: 1000px;
@@ -479,9 +479,9 @@ body {
   }
   section.visible {
     opacity: 1;
-    transform: translateY(-1em);
+    transform: translateY(-15px);
     transition: opacity 1.1s ease, transform 1.1s ease;
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
   }
   h2 {
     font-family: 'Dancing Script', cursive;
@@ -597,7 +597,7 @@ body {
   .kofi-button:hover {
     background-color: #b0d0f2;
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-15px);
     box-shadow: 0 5px 12px rgba(0,0,0,0.1);
   }
   .gift-icon {
@@ -836,7 +836,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slowObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.3 }); // 👈 Elegant delayed trigger
+  }, { threshold: 0 }); // 👈 Elegant delayed trigger
 
   const snappyObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {

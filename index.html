@@ -856,7 +856,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slowObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.3 }); // 👈 Elegant delayed trigger
+  }, { threshold: 0.2 }); // 👈 Elegant delayed trigger
 
   const snappyObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -865,7 +865,7 @@ document.addEventListener('DOMContentLoaded', function() {
         snappyObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.3 }); // 👈 Snappier trigger for lower sections
+  }, { threshold: 0.2 }); // 👈 Snappier trigger for lower sections
 
   sections.forEach(section => {
     if (section.id === 'gift-fund' || section.id === 'share-photos' || section.querySelector('.rsvp-btn')) {
